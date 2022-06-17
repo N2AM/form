@@ -23,8 +23,13 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -81,9 +86,42 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "main": ["setupJest.ts"],
+            "main": [
+              "setupJest.ts"
+            ],
             "tsConfig": "tsconfig.spec.json",
             "no-cache": true
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "fedex-signup:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "fedex-signup:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "fedex-signup:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "fedex-signup:serve:production"
+            }
           }
         }
       }
