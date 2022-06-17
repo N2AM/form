@@ -1,0 +1,29 @@
+.signup-layout {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+
+  .headline {
+    flex: 1;
+    background-color: var(--primary);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .logo {
+      width: 100px;
+    }
+
+    .header,
+    .content {
+      color: var(--white);
+      margin-bottom: 0;
+    }
+  }
+  .form {
+    flex: 2;
+    background-color: var(--secondary);
+  }
+}

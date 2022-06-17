@@ -4,6 +4,7 @@ import { AuthorizationRoutingModule } from './authorization-routing.module';
 import { SignupComponent } from './components/signup/signup.component';
 import { NgxsModule } from '@ngxs/store';
 import { UserState } from './store/user.state';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -11,6 +12,7 @@ import { UserState } from './store/user.state';
   declarations: [SignupComponent],
   imports: [
     CommonModule,
+    HttpClientModule,
     AuthorizationRoutingModule,
     NgxsModule.forFeature([UserState]),
   ]
