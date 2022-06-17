@@ -14,13 +14,17 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Dependencies
+
+Run `ng add @cypress/schematic` to add Cypress and auxiliary npm packages to package.json, add the Cypress configuration file cypress.json, change the angular.json configuration file to add ng run commands, and create a sub-directory named cypress with a scaffold for your tests.
+
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests via [Jest](https://jestjs.io).
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run `ng e2e` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
 ## Further help
 
