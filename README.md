@@ -20,6 +20,9 @@ Run `ng add @cypress/schematic` to add Cypress and auxiliary npm packages to pac
 
 Run `npm install @ngxs/store` to apply state management, single source of truth for application's state via [NGXS](https://www.ngxs.io).
 
+Run `npm install @ngxs-labs/emitter` ER is a new pattern that provides the opportunity to feel free from actions via [Emitter](https://www.ngxs.io/v/v3.4/ngxs-labs/emitter).
+
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Jest](https://jestjs.io).
