@@ -1,0 +1,1 @@
+export const PROD_REST_URL = `https://demo-api.now.sh`
