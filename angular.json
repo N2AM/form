@@ -82,11 +82,14 @@
           "builder": "@angular-builders/jest:run",
           "options": {
             "main": ["setupJest.ts"],
-            "tsConfig": "src/tsconfig.spec.json",
+            "tsConfig": "tsconfig.spec.json",
             "no-cache": true
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "8176ac21-fee9-4051-8bf4-a54190790484"
   }
 }
