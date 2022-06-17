@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AuthorizationRoutingModule } from './authorization-routing.module';
+import { SignupComponent } from './components/signup/signup.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [SignupComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    AuthorizationRoutingModule
   ]
 })
 export class AuthorizationModule { }
