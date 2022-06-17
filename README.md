@@ -18,7 +18,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng add @cypress/schematic` to add Cypress and auxiliary npm packages to package.json, add the Cypress configuration file cypress.json, change the angular.json configuration file to add ng run commands, and create a sub-directory named cypress with a scaffold for your tests.
 
-Run `npm install @ngxs/store` to apply state management, single source of truth for application's state via [NGXS] (https://www.ngxs.io).
+Run `npm install @ngxs/store` to apply state management, single source of truth for application's state via [NGXS](https://www.ngxs.io).
 
 ## Running unit tests
 
