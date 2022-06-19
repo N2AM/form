@@ -22,6 +22,8 @@ Run `npm install @ngxs/store` to apply state management, single source of truth 
 
 Run `npm install @ngxs-labs/emitter` ER is a new pattern that provides the opportunity to feel free from actions via [Emitter](https://www.ngxs.io/v/v3.4/ngxs-labs/emitter).
 
+Run `ng add @angular/material` for [Angular Material](https://material.angular.io).
+
 
 ## Running unit tests
 
