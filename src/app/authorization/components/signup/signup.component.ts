@@ -47,7 +47,6 @@ export class SignupComponent {
             });
 
             dialogRef.afterClosed().subscribe(result => {
-              this.signupForm.reset();
               this.formDirective.resetForm();
             });
           }
