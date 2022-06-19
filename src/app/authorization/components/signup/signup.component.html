@@ -1,11 +1,73 @@
 <div class="signup-layout">
   <div class="headline">
-    <img class="logo" src="assets/imgs/logo.png" alt="logo" />
-    <h2 class="header">Welcome to FedEx. Let’s get started.</h2>
+    <img class="logo" src="assets/imgs/icons/logo.png" alt="logo" />
+    <h1 class="header">Welcome to FedEx Let’s get started ...</h1>
     <p class="content">
-      Enter your contact information, or log in, if you already have a user ID
-      and password.
+      Enter your contact information. Already have an account?
+      <a routerLink="">log in</a>.
     </p>
   </div>
-  <div class="form"></div>
+  <div class="form">
+    <div class="form-wrapper">
+      <div class="form-header">
+        <img
+          class="form-header-cover"
+          src="assets/imgs/Formal-Letter-Format.jpg"
+        />
+      </div>
+      <form
+        class="form-inputs-wrapper"
+        [formGroup]="signupForm"
+        (ngSubmit)="addUser()"
+      >
+        <h2 class="form-header-heading">Let's have an account!</h2>
+        <div class="form-inputs">
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>First name</mat-label>
+            <input matInput formControlName="firstName" />
+            <mat-error></mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Last name</mat-label>
+            <input matInput formControlName="lastName" />
+            <mat-error></mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" placeholder="Placeholder" />
+            <mat-error></mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              [type]="hide ? 'password' : 'text'"
+              formControlName="password"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+            <mat-error></mat-error>
+          </mat-form-field>
+        </div>
+        <button
+          mat-raised-button
+          type="submit"
+          color="primary"
+          [disabled]="!signupForm.valid"
+        >
+          Create account
+        </button>
+      </form>
+    </div>
+  </div>
 </div>

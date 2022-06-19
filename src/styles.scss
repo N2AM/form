@@ -1,12 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
 @use "theme-variables";
+@use "base" as b;
 
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: FedExSans, Arial, sans-serif;
+  font-size: 62.5%;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  font-size: 4 * b.$base-unit;
+}
+
+h2 {
+  font-size: 3 * b.$base-unit;
+}
+
+h3 {
+  font-size: 2 * b.$base-unit;
+}
+
+p {
+  font-size: 1.6 * b.$base-unit;
+}
+
+a {
+  color: var(--white);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
