@@ -1,0 +1,21 @@
+@use "base" as b;
+.dialog {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2 * b.$base_unit;
+  .dialog-cover {
+    width: 100%;
+  }
+  .dialog-header-heading {
+    margin: 0;
+    padding-top: 1rem;
+  }
+}
+:host {
+  .mat-dialog-actions {
+    padding-top: 0;
+  }
+}

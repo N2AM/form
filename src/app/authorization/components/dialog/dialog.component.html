@@ -1,0 +1,21 @@
+<div class="dialog">
+  <img
+    class="dialog-cover"
+    src="assets/imgs/account.jpg"
+    alt="account created"
+  />
+  <h2 class="dialog-header-heading">
+    Hi {{ user.firstName }}, You have got an account!
+  </h2>
+
+  <div mat-dialog-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      cdkFocusInitial
+      (click)="onNoClick()"
+    >
+      Ok
+    </button>
+  </div>
+</div>

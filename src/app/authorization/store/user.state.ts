@@ -5,16 +5,19 @@ import { Observable, tap } from 'rxjs';
 import { User, UserData } from '../models/user-data.model';
 import { UserDataService } from '../services/user-data.service';
 
-@Injectable()
+export const DEFAULT_USER_STATE: User = {
+    _id: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+}
+
 @State<User>({
     name: 'USerState',
-    defaults: {
-        _id: '',
-        firstName: '',
-        lastName: '',
-        email: '',
-    },
+    defaults: DEFAULT_USER_STATE,
 })
+@Injectable()
+
 export class UserState {
     private static userDataService: UserDataService;
     constructor(injector: Injector) {
@@ -26,7 +29,6 @@ export class UserState {
         return state;
     }
 
-    // define type for debugging purposes
     @Receiver({ type: '[User] add new user' })
     public static setUser(
         ctx: StateContext<User>,

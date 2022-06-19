@@ -5,9 +5,7 @@ import { User, UserData } from '../models/user-data.model';
 import { PROD_REST_URL } from 'src/app/app.constants';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class UserDataService {
 
   private readonly USER_POST_URL = `${PROD_REST_URL}/users`

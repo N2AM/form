@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,IAAI;CAYZ;;AAfD,AAIE,cAJY,CAIZ,SAAS,CAAC;EACR,IAAI,EAAE,GAAG;EACT,gBAAgB,EAAE,cAAc;EAChC,OAAO,EAAE,IAAI;CAId;;AAXH,AAQI,cARU,CAIZ,SAAS,CAIP,KAAK,CAAC;EACJ,KAAK,EAAE,KAAK;CACb;;AAVL,AAYE,cAZY,CAYZ,KAAK,CAAC;EACJ,IAAI,EAAE,CAAC;CACR",
-    "sources": [
-        "signup.component.scss"
-    ],
-    "names": [],
-    "file": "signup.component.css"
-}
