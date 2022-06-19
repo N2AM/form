@@ -24,7 +24,6 @@ Run `npm install @ngxs-labs/emitter` ER is a new pattern that provides the oppor
 
 Run `ng add @angular/material` for [Angular Material](https://material.angular.io).
 
-
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Jest](https://jestjs.io).
