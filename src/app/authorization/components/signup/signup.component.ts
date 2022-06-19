@@ -12,7 +12,7 @@ import { containsUserName } from '../../validators/contains-user-name.validator'
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss']
 })
-export class SignupComponent implements OnInit {
+export class SignupComponent {
   @ViewChild(FormGroupDirective) formDirective!: FormGroupDirective;
 
   hide = true;
@@ -30,14 +30,12 @@ export class SignupComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private userStateService: UserStateService, private dialog: MatDialog) { }
 
-  ngOnInit(): void {
-  }
 
   ngOndestroy(): void {
     this.#subscriptions.unsubscribe();
   }
 
-  addUser() {
+  addUser(): void {
     if (this.signupForm.valid) {
       this.userStateService.setUser.emit(this.signupForm.value);
       this.#subscriptions.add(
@@ -49,6 +47,7 @@ export class SignupComponent implements OnInit {
             });
 
             dialogRef.afterClosed().subscribe(result => {
+              this.signupForm.reset();
               this.formDirective.resetForm();
             });
           }
