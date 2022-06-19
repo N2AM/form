@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthorizationModule } from './authorization/authorization.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AuthorizationModule } from './authorization/authorization.module';
     AppRoutingModule,
     AuthorizationModule,
     NgxsModule.forRoot([], { developmentMode: !environment.production }),
-    NgxsEmitPluginModule.forRoot()
+    NgxsEmitPluginModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/register/' }],
   bootstrap: [AppComponent]
