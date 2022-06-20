@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User, UserData } from '../models/user-data.model';
-import { PROD_REST_URL } from 'src/app/app.constants';
+import { PROD_REST_URL } from '../../app.constants';
 
 
 @Injectable()
