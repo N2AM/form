@@ -15,11 +15,7 @@
           src="assets/imgs/Formal-Letter-Format.jpg"
         />
       </div>
-      <form
-        class="form-inputs-wrapper"
-        [formGroup]="signupForm"
-        (ngSubmit)="addUser()"
-      >
+      <form class="form-inputs-wrapper" [formGroup]="signupForm">
         <h2 class="form-header-heading">Let's have an account!</h2>
         <div class="form-inputs">
           <mat-form-field class="form-field" appearance="outline">
@@ -81,7 +77,8 @@
         </div>
         <button
           mat-raised-button
-          type="submit"
+          type="button"
+          (click)="addUser()"
           color="primary"
           [disabled]="!signupForm.valid"
         >

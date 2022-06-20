@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroupDirective, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { take, Subscription } from 'rxjs';
 import { User } from '../../models/user-data.model';
@@ -13,8 +13,6 @@ import { containsUserName } from '../../validators/contains-user-name.validator'
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
-  @ViewChild(FormGroupDirective) formDirective!: FormGroupDirective;
-
   hide = true;
   readonly #subscriptions: Subscription = new Subscription();
 
@@ -47,7 +45,9 @@ export class SignupComponent {
             });
 
             dialogRef.afterClosed().subscribe(result => {
-              this.formDirective.resetForm();
+              this.signupForm.reset();
+              this.signupForm.markAsPristine();
+              this.signupForm.markAsUntouched();
             });
           }
         }),
