@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserStateService } from '../../store/user-state.service';
+import { UserDataService } from '../../services/user-data.service';
 
 import { SignupComponent } from './signup.component';
 
@@ -27,7 +28,7 @@ describe('SignupComponent', () => {
         MatFormFieldModule,
         BrowserAnimationsModule
       ],
-      providers: [UserStateService],
+      providers: [UserStateService, UserDataService],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SignupComponent);
@@ -37,5 +38,16 @@ describe('SignupComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should be valid if form value is valid', () => {
+    component.signupForm.setValue({
+      "firstName": "Thomas",
+      "lastName": "Shelby",
+      "email": "thomas@shelby.co.uk",
+      "password": "Tlmsssss5"
+    });
+
+    expect(component.signupForm.valid).toEqual(true);
   });
 });
